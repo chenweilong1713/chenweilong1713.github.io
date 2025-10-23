@@ -1,0 +1,13 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+/dist*
+pnpm-debug
+auto-*.d.ts
+.idea
+.history
+.vscode/
+.env.local
+.vite
+venv
