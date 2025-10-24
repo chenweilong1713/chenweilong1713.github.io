@@ -50,6 +50,7 @@ IdentityAgent none
 IdentitiesOnly yes
 ```
 ![img_1.png](img_1.png)
+
 * host: 后面有用，会说到，自己定义
 * hostName：对应的平台域名地址
 * IdentityFile：对应私钥的文件路径
