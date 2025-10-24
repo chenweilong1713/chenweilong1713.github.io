@@ -2,6 +2,7 @@
 ## 情况说明
 &nbsp;&nbsp;我的电脑是macOS系统，先说明一下我的需求。
 目前我有3个账号:
+
 * 账号1是A公司在阿里平台上的。
 * 账号2是B公司gitee平台上。
 * 账号3是我自己的在gitee平台上。
@@ -23,7 +24,8 @@ ssh-keygen -t ed25519 -C "Gitee SSH Key"
 4. 回车后根据提示确认
 
 这里的提示输入最好手动设置一下，如果你在同一个平台上需要配置多个ssh的话。
-![image](/upload/2023/08/image.png)
+
+![img.png](img.png)
 
 > 我这里输入的是A，创建两个文件，其中文件A是私钥，A.pub是公钥，键入到对应平台的ssh配置里。
 5. 其它ssh秘钥生成重复操作
@@ -47,7 +49,7 @@ PreferredAuthentications publickey
 IdentityAgent none
 IdentitiesOnly yes
 ```
-![image-1693126336777](/upload/2023/08/image-1693126336777.png)
+![img_1.png](img_1.png)
 * host: 后面有用，会说到，自己定义
 * hostName：对应的平台域名地址
 * IdentityFile：对应私钥的文件路径
