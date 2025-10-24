@@ -8,3 +8,5 @@ theme:
     - navigation.tabs                   # tabs,顶部下方的导航
     #- navigation.sections
     - navigation.path
+    - toc.follow                        # 锚点跟随
+    - navigation.top                    # 返回顶部按钮
