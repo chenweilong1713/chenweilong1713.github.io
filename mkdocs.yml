@@ -2,3 +2,9 @@ site_name: 实习两年半
 site_url: https://unuuc.cn
 theme:
   name: material
+  features:
+    - navigation.instant                # 及时加载，不会刷新整个页面
+    - navigation.instant.progress       # 进度条，在300ms以内不会显示
+    - navigation.tabs                   # tabs,顶部下方的导航
+    #- navigation.sections
+    - navigation.path
