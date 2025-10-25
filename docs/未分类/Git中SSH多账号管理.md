@@ -21,7 +21,7 @@ ssh-keygen -t ed25519 -C "<注释内容>"
 ```
 ssh-keygen -t ed25519 -C "Gitee SSH Key"
 ```
-这里的 "<注释内容>" 和 "Gitee SSH Key" 你可以自定义，我一半都是输入邮箱或者我的名字
+这里的 "<注释内容>" 和 "Gitee SSH Key" 你可以自定义，我一般都是输入邮箱或者我的名字
 
 4.回车后根据提示确认
 
@@ -30,7 +30,9 @@ ssh-keygen -t ed25519 -C "Gitee SSH Key"
 ![img.png](img.png)
 
 > 我这里输入的是A，创建两个文件，其中文件A是私钥，A.pub是公钥，键入到对应平台的ssh配置里。
+
 5. 其它ssh秘钥生成重复操作
+
 ## config配置文件
 1. 在.ssh目录下创建文件 **config**
 2. 输入内容
