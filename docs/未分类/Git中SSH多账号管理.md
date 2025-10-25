@@ -8,20 +8,22 @@
 * 账号3是我自己的在gitee平台上。
 
 ## 创建ssh秘钥
-1. 进入到用户目录下的 .ssh目录里
+
+1.进入到用户目录下的 .ssh目录里
 ```
 cd ~/.ssh
 ```
-3. codeup.aliyun.com平台
+2.codeup.aliyun.com平台
 ```
 ssh-keygen -t ed25519 -C "<注释内容>"
 ```
-3. gitee.com平台
+3.gitee.com平台
 ```
 ssh-keygen -t ed25519 -C "Gitee SSH Key"
 ```
 这里的 "<注释内容>" 和 "Gitee SSH Key" 你可以自定义，我一半都是输入邮箱或者我的名字
-4. 回车后根据提示确认
+
+4.回车后根据提示确认
 
 这里的提示输入最好手动设置一下，如果你在同一个平台上需要配置多个ssh的话。
 
@@ -55,7 +57,7 @@ IdentitiesOnly yes
 * hostName：对应的平台域名地址
 * IdentityFile：对应私钥的文件路径
 
-# 拉去代码
+## 拉取代码
 > 如我要拉去的仓库地址: git@gitee.com:cwljxf/halo-theme-joe2.0-cwl.git
 
 由于我上面config文件中配置的host为huihai，所以就需要修改仓库地址，将@后面的域名换位huhai
@@ -68,5 +70,20 @@ git@huihai:cwljxf/halo-theme-joe2.0-cwl.git
 ps: 以上地址全为虚拟，记录使用
 
 
+## github中使用代理的情况
 
+```
+# github chenweilong
+Host github.com
+HostName ssh.github.com
+Port 443
+ProxyCommand connect -H 127.0.0.1:7890 %h %p
+IdentityFile C:\Users\cwl\.ssh\github\xxxx
+PreferredAuthentications publickey
+IdentityAgent none
+IdentitiesOnly yes
+```
 
+**注意** ：
+
+HostName: 当你指定443端口的时候，应该使用 ssh.github.com 地址
