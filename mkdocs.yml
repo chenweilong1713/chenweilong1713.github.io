@@ -7,8 +7,8 @@ nav:
   - Spring:
       - index: Spring/index.md
       - 安装: guide/install.md
-  - 未分类:
-      - Git中SSH多账号管理: 未分类/Git中SSH多账号管理.md
+  - 随笔:
+      - Git中SSH多账号管理: 随笔/Git中SSH多账号管理.md
 
 theme:
   name: material
