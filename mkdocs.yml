@@ -5,7 +5,7 @@ site_url: https://unuuc.cn
 nav:
   - 首页: index.md
   - Spring:
-      - index: Spring/index.md
+      - Spring 事务机制: Spring/spring-shi-wu-ji-zhi.md
       - 安装: guide/install.md
   - 随笔:
       - Git中SSH多账号管理: 随笔/Git中SSH多账号管理.md
