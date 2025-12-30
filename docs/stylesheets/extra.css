@@ -1,0 +1,34 @@
+/* 卡片网格布局 */
+.grid.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+    list-style: none; /* 移除默认列表样式 */
+    padding: 0;
+}
+
+.grid.cards > li {
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 0.1rem;
+    padding: 1.2rem;
+    transition: border 0.25s, box-shadow 0.25s;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid.cards > li:hover {
+    border-color: var(--md-default-fg-color--lighter);
+    box-shadow: 0 4px 10px rgba(0,0,0, 0.05);
+}
+
+/* 分割线样式 adjustment */
+.grid.cards hr {
+    margin: 1em 0;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* 调整按钮间距 */
+.md-button {
+    margin: 0 0.5rem;
+}

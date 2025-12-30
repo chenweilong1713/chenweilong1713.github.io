@@ -5,18 +5,78 @@ site_url: https://unuuc.cn
 nav:
   - 首页: index.md
   - Spring:
-      - index: Spring/index.md
-      - 安装: guide/install.md
+      - Spring/index.md
   - 未分类:
       - Git中SSH多账号管理: 未分类/Git中SSH多账号管理.md
 
 theme:
   name: material
+  language: zh
+  icon:
+    logo: material/library
+  favicon: assets/favicon.png
+  palette:
+    # 切换到浅色模式
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    # 切换到深色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
   features:
-    - navigation.instant                # 及时加载，不会刷新整个页面
-    - navigation.instant.progress       # 进度条，在300ms以内不会显示
-    - navigation.tabs                   # tabs,顶部下方的导航
-    #- navigation.sections
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
     - navigation.path
-    - toc.follow                        # 锚点跟随
-    - navigation.top                    # 返回顶部按钮
+    - navigation.prune
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css
